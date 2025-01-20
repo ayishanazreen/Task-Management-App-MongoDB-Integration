@@ -1,0 +1,67 @@
+.todolist-container{
+    width: 100%;
+    margin-top: 20px;
+    
+}
+.todo-item{
+    position: relative;
+    margin-bottom: 20px;
+    border-bottom: 1px dotted;
+    background: #152431;
+    height: 69px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: margin-bottom 0.3s ease-in-out;
+}
+
+.todo-item.editing {
+    margin-bottom: 160px; /* Increase the margin when popup is active */
+    position: relative;
+    border-bottom: 1px dotted;
+    background: #152431;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+.todolist-container .todo-item .todo{
+    margin-left: 30px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    color: #8FA8C1;
+
+}
+.todolist-container .todo-item .todo-strike{
+    margin-left: 30px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    color: #8FA8C1;
+    text-decoration: line-through;
+}
+
+
+.edit-delete-section{
+    display: flex;
+    gap: 15px;
+    margin-right: 10px;
+    padding: 5px;
+}
+.delete-img{
+    filter: invert(1);
+}
+.editing-popup {
+    position: absolute;
+    top: 100%; /* Position it right below the task */
+    left: 0;
+    width: 100%;
+    max-height: 150px;
+    background-color: #f4f4f4; /* Optional: add a background for the popup */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: to add some shadow */
+    z-index: 9999; /* Ensure it appears above other elements */
+    overflow-y: auto;
+  }

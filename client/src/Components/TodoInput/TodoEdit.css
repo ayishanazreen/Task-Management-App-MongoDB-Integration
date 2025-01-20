@@ -1,0 +1,43 @@
+.edit-container{
+    height: 80px;
+    border-bottom: 1px dotted;
+}
+.task-edit-container{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    margin-bottom: 20px;
+}
+.task-edit-container input{
+    padding: 10px;
+    border: none;
+    margin-left: 20px;
+    width: 60%;
+    background-color: #152431;
+    border: 1px solid #8FA8C180;
+    border-radius: 4px;
+    border: 1px 0px 0px 0px;
+    color:#8FA8C180;
+}
+
+.task-edit-btn-section{
+    display: flex;
+    gap: 5px;
+    margin-left: 5px;
+}
+.task-edit-btn-section button{
+    border:none;
+    outline: none;
+    width: 60px;
+    border-radius: 4px;
+    background: #0C5488;
+    color: #8FA8C1;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.task-edit-btn-section .cancel-btn{
+background: #8FA8C1;
+color: #0C5488;
+}
