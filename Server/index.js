@@ -4,10 +4,27 @@ const { v4: uuidv4 } = require('uuid');
 const PORT=3055;
 // const todoList=require("./todoList.json");
 const cors=require("cors");
+const {errorHandler}=require('./middlewares/errorHandler')
 
 let todoList=[
     { id:1, name:"Learn Express" , isCompleted:false },
 ];
+
+
+const validateAttributes=(attributes, body, next)=>{
+ for(const attribute of attributes){
+    if (!(attribute in body)){
+        const error={
+            status:400,
+            fields:{
+                body,
+                required:attribute
+            },
+        };
+        return next(error)
+    }
+}  
+};
 
 app.use(cors());
 app.use(express.json());
@@ -42,9 +59,60 @@ app.post('/api/todo',(req,res) =>{
 })
 
 
-app.put('/api/todo', (req,res)=>{
+app.put('/api/todo', (req,res,next)=>{
     const {id, name, isCompleted}=req.body;
-    if (todoList.find((item)=> item.id ===id)){
+    validateAttributes(['id', 'name','isCompleted'] , req.body, next)   //validating attributes using middle ware and function
+
+
+  //validating attributeds in Normal way using if condition 
+
+
+    //  if(!("id" in req.body) || !("name" in req.body) || !("isCompleted" in req.body))
+    //     {
+    //        res.status(404).json({
+    //         message:"Missing Attribute : id, name, isCompleted"
+    //      });
+    //      return;
+    //     }
+
+ //validating attributes using middleawre
+
+
+    // if (!("id" in req.body)){
+    //     const error={
+    //         status:400,
+    //         fields:{
+    //             body:req.body,
+    //             required:"id",
+    //         },
+    //     };
+    //     return next(error);
+    // }
+
+    // if (!("name" in req.body)){
+    //     const error={
+    //         status:400,
+    //         fields:{
+    //             body:req.body,
+    //             required:"name",
+    //         },
+    //     };
+    //     return next(error);
+    // }
+
+    // if (!("isCompleted" in req.body)){
+    //     const error={
+    //         status:400,
+    //         fields:{
+    //             body:req.body,
+    //             required:"isCompleted",
+    //         },
+    //     };
+    //     return next(error);
+    // }
+
+
+       if (todoList.find((item)=> item.id ===id)){
         todoList.forEach((todo) => {
             if(todo.id===id)
             {
@@ -60,6 +128,8 @@ app.put('/api/todo', (req,res)=>{
             message:"item with id is not existed" });
     }
 });
+
+app.use(errorHandler);
 
 
 app.delete('/api/todo', (req,res) =>{
