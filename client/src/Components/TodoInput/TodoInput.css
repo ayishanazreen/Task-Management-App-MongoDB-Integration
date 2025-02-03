@@ -16,6 +16,7 @@
     color:#8FA8C180;
 }
 .todo-input-container button{
+  
     color: #8FA8C1;
     border: none;
     height: 40px;
@@ -30,5 +31,11 @@
     display: flex;
     flex-direction: column;
     outline: none;
+    margin-left: 5px;
     
+}
+
+.todo-input-container button:hover{
+    background:  #c6ced3;
+    color: #152431;
 }

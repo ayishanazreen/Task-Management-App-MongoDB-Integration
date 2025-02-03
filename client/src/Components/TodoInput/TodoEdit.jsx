@@ -3,7 +3,7 @@ import './TodoEdit.css';
 
 
 const TodoEdit = ({task, handleSaveEdit, handleCancelEdit}) => {
-    const [editedTask, setEditedTask]= useState(task.name);
+    const [editedTask, setEditedTask]= useState(task.todo);
   return (
     <div className='edit-container'>
       <div className='task-edit-container'>

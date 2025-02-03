@@ -8,14 +8,15 @@ const Todo = () => {
   const [task, setTask] =useState([]);
   const [newTask, setNewtask]=useState("");
   const [editingTask, setEditingTask]=useState(null);
-  const API_URL="http://localhost:3055/api/todo";
+  const API_URL="http://localhost:3009/api/todo";
   const [editingId, setEditingId]=useState("");
   
   const fetchTodo=async()=>
   {
     try 
     {
-      const response=await axios(API_URL);
+      const response=await axios(API_URL)
+      console.log(response);
       setTask(response.data);
     } 
     catch (error)
@@ -39,14 +40,15 @@ const Todo = () => {
     const response=await axios(API_URL, {
       method:"POST",
       data:{
-        newtodo:newTask,
+        todo:newTask,
+        isCompleted:false,
       }})
       setTask(response.data);
+      setNewtask("");
     } 
   }
    catch (error) {
     console.error(error);
-    
   }
 
   };
@@ -56,12 +58,12 @@ const Todo = () => {
 
 
   //Delete
-  const handleDeleteTask = async(id)=>{
+  const handleDeleteTask = async(_id)=>{
     try {
       const response=await axios(API_URL, {
         method:"DELETE",
        data:{
-        id:id,
+        _id:_id,
        }
       });
       setTask(response.data);
@@ -78,19 +80,18 @@ const Todo = () => {
 
   const handleEditTask= async(editTodo) => {
     // console.log(editTodo.id);
-    setEditingId(editTodo.id);
+    setEditingId(editTodo._id);
     setEditingTask(editTodo);
     // const editTodo=task.find((todo)=>todo.id ===editingTask.id )
   }
 //PUT
   const handleSaveEdit = async(updatedTask)=> {
-    console.log("updated Task", updatedTask)
     try {
       const response=await axios(API_URL, {
         method:"PUT",
         data:{
-          id:editingId,
-          name:updatedTask,
+          _id:editingId,
+          todo:updatedTask,
           isCompleted:false,
         }
       })
@@ -108,10 +109,10 @@ const Todo = () => {
     setEditingTask(null);
   }
 
-  const handleComplete =(id)=>
+  const handleComplete =(_id)=>
     {
      const newList= task.map((todo)=> {
-      if(todo.id===id){ 
+      if(todo._id===_id){ 
         return {...todo, isCompleted: !todo.isCompleted}
     }
   else
