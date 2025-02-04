@@ -8,7 +8,7 @@ const Todo = () => {
   const [task, setTask] =useState([]);
   const [newTask, setNewtask]=useState("");
   const [editingTask, setEditingTask]=useState(null);
-  const API_URL="http://localhost:3009/api/todo";
+  const API_URL="https://task-management-app-mongodb-integration-na7y.onrender.com/api/todo";
   const [editingId, setEditingId]=useState("");
   
   const fetchTodo=async()=>
