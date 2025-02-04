@@ -9,7 +9,7 @@
     border: none;
     margin-right: 5px;
     width: 75%;
-    background-color: #152431;
+    background-color:#e3e6e9;
     border: 1px solid #8FA8C180;
     border-radius: 4px;
     border: 1px 0px 0px 0px;
@@ -17,7 +17,7 @@
 }
 .todo-input-container button{
   
-    color: #8FA8C1;
+    color: #eef1f3;
     border: none;
     height: 40px;
     padding: 20px;
@@ -25,7 +25,7 @@
     font-family: Roboto;
     font-size: 14px;
     font-weight: 500;
-    background: #0C5488;
+    background: #572e2e;
     text-align: center;
     justify-content: center;
     display: flex;

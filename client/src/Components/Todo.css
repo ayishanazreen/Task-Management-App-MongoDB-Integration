@@ -2,15 +2,15 @@
     width: 500px;
     height: 612px;
     border-radius: 6px; 
-    background: #152431;
-    border-bottom:outset rgb(26, 25, 25) ;
-    border-right:outset rgb(26, 25, 25) ;
-    border-width: 15px;
+    background: #531a1aab;
+    border-bottom: outset rgb(0 0 0 / 27%);
+    border-right: outset rgb(2 2 2 / 27%);
+    border-width: 8px;
     overflow: auto;
 }
 .todo-container h1
 {
-color: #8FA8C1;
+color: #ffa8a8;
 font-family: Roboto;
 font-size: 36px;
 font-weight: 700;

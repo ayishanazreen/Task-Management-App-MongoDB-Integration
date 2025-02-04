@@ -7,12 +7,13 @@
     position: relative;
     margin-bottom: 20px;
     border-bottom: 1px dotted;
-    background: #152431;
+    background: #773b3b;
     height: 69px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     transition: margin-bottom 0.3s ease-in-out;
+    padding: 10px;
 }
 
 .todo-item.editing {
@@ -31,7 +32,7 @@
     font-family: Roboto;
     font-size: 16px;
     font-weight: 500;
-    color: #8FA8C1;
+    color: #ffffff;
 
 }
 .todolist-container .todo-item .todo-strike{
