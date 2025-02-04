@@ -6,7 +6,7 @@
   }
   body {
     /* background-color: #1E1E1E; */
-    background-image: url('./images/Todo-bg.jpeg');
+    background-image: url('/images/Todo-bg.jpeg');
     /* background-repeat: repeat; */
     background-size: cover;
     min-height: 100vh;
