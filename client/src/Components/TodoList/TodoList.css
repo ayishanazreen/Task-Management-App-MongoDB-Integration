@@ -20,7 +20,7 @@
     margin-bottom: 160px; /* Increase the margin when popup is active */
     position: relative;
     border-bottom: 1px dotted;
-    background: #152431;
+    background: #773b3b;
     height: 100px;
     width: 100%;
     display: flex;
@@ -60,7 +60,7 @@
     left: 0;
     width: 100%;
     max-height: 150px;
-    background-color: #f4f4f4; /* Optional: add a background for the popup */
+    background-color:#f4f4f4cf;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: to add some shadow */
     z-index: 9999; /* Ensure it appears above other elements */
