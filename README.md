@@ -1,6 +1,6 @@
 
 
-**Deployed Url** : 
+**Deployed Url** : https://task-management-app-mongodb-integration.onrender.com 
 
 <h1> 🖼️ Task Management Application </h1>
  A task management web application built with React and Vite, designed to provide seamless adding daily task to schedule plans, integrated n MongoDB database and deployed using Render.
