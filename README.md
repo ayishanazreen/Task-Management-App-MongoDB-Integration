@@ -35,7 +35,7 @@
 
  <h3>Home Page</h3>
 
- ![screenshots](https://github.com/ayishanazreen/ImageGallery/blob/master/screenshots/mainview.png?raw=true)
+ ![screenshots](https://github.com/ayishanazreen/Task-Management-App-MongoDB-Integration/blob/master/pics/HomePage.png?raw=true)
 
  <h3>Triggering file explorer and Adding Image.</h3>
 
